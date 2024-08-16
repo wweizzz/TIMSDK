@@ -109,7 +109,7 @@ public class LoginForDevActivity extends BaseLightActivity {
                 TIMAppService.getInstance().initBeforeLogin(0);
                 mLoginView.setEnabled(false);
                 final String userID = mUserAccount.getText().toString();
-                final String userSig = GenerateTestUserSig.genTestUserSig(mUserAccount.getText().toString());
+                final String userSig = GenerateTestUserSig.genTestUserSig();
                 LoginWrapper.getInstance().loginIMSDK(
                     LoginForDevActivity.this, AppConfig.DEMO_SDK_APPID, userID, userSig, TUIUtils.getLoginConfig(), new TUICallback() {
                         @Override
@@ -161,7 +161,7 @@ public class LoginForDevActivity extends BaseLightActivity {
                 }
             }
         });
-        mUserAccount.setText(UserInfo.getInstance().getUserId());
+        mUserAccount.setText(GenerateTestUserSig.genTestUserId());
 
         languageArea.setOnClickListener(new View.OnClickListener() {
             @Override

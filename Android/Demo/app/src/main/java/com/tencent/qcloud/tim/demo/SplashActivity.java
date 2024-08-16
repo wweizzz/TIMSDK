@@ -89,7 +89,7 @@ public class SplashActivity extends BaseLightActivity {
         DemoLog.i(TAG, "start MainActivity");
 
         Intent intent;
-        if (AppConfig.DEMO_UI_STYLE == 0) {
+        if (AppConfig.DEMO_UI_STYLE == AppConfig.DEMO_UI_STYLE_CLASSIC) {
             intent = new Intent(SplashActivity.this, MainActivity.class);
         } else {
             intent = new Intent(SplashActivity.this, MainMinimalistActivity.class);

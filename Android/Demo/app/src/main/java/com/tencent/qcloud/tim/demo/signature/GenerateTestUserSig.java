@@ -1,5 +1,6 @@
 package com.tencent.qcloud.tim.demo.signature;
 
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.Base64;
 
@@ -41,7 +42,25 @@ public class GenerateTestUserSig {
      * You can view your SDKAppID after creating an application in the [Tencent Cloud IM console](https://console.intl.cloud.tencent.com/im).
      * SDKAppID uniquely identifies a Tencent Cloud account.
      */
-    public static final int SDKAPPID = 0;
+    public static final int SDKAPPID = 1600014546;
+
+    public static final String userId1 = "706637";
+    public static final String userSig1 = "eJw1jssOgjAURP*la0N6oQ8gcYkLrAutRrssacEbI2IlRGP8dwnocs7MSeZN9kpH-tlh8CTnkDJK6WKCgw8kJ3FEyZwf7mK7Dh3JQYwjYJyJuUHn2x5rnARJhUjk38FmRNlRV3Em16ZWdChWSjvUN9vebbk1sAtmo16uCsWpPB*WP7HH6-gHZJwwwQHSzxfevzB0";
+
+    public static final String userId2 = "542482";
+    public static final String userSig2 = "eJw1jtEKgjAYhd9l1yHb3JYMuhKEshtxlngnbMpf6IZJM6J3b2hdnu*cD84bqXMZmcXBZJDkJGEY490Kn2ZCEtEIoy0-9L11DjSSRIQRYZyJrQFtxhk6WAXOKEvo34E*IHXJO9vGtMC2rFXWjEVtG1WJPM2ulU2HoyB*ufnTC-vDT5xhCH-InsZMhFfJ5wviATBx";
+
+    private static Boolean isMoNiQi() {
+        return Build.VERSION.SDK_INT <= Build.VERSION_CODES.R;
+    }
+
+    public static String getUserId() {
+        return isMoNiQi() ? userId1 : userId2;
+    }
+
+    public static String getUserSig() {
+        return isMoNiQi() ? userSig1 : userSig2;
+    }
 
     /**
      * Signature validity period, which should not be set too short
@@ -79,8 +98,12 @@ public class GenerateTestUserSig {
      * <p>
      * Reference: https://intl.cloud.tencent.com/document/product/1047/34385
      */
-    public static String genTestUserSig(String userId) {
-        return GenTLSSignature(SDKAPPID, userId, EXPIRETIME, null, SECRETKEY);
+    public static String genTestUserId() {
+        return getUserId();
+    }
+
+    public static String genTestUserSig() {
+        return getUserSig();
     }
 
     /**
