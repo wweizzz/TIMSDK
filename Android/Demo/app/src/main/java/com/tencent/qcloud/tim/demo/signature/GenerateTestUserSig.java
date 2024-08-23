@@ -42,13 +42,13 @@ public class GenerateTestUserSig {
      * You can view your SDKAppID after creating an application in the [Tencent Cloud IM console](https://console.intl.cloud.tencent.com/im).
      * SDKAppID uniquely identifies a Tencent Cloud account.
      */
-    public static final int SDKAPPID = 1600014546;
+    public static final int SDKAPPID = 1600043655;
 
-    public static final String userId1 = "706637";
-    public static final String userSig1 = "eJw1jssOgjAURP*la0N6oQ8gcYkLrAutRrssacEbI2IlRGP8dwnocs7MSeZN9kpH-tlh8CTnkDJK6WKCgw8kJ3FEyZwf7mK7Dh3JQYwjYJyJuUHn2x5rnARJhUjk38FmRNlRV3Em16ZWdChWSjvUN9vebbk1sAtmo16uCsWpPB*WP7HH6-gHZJwwwQHSzxfevzB0";
+    public static final String userId1 = "750340";
+    public static final String userSig1 = "eJw9jlELgjAUhf-LnkPu5q6uQS-SQ5CRUAnuLdhmlzCmjgii-55o9Hi*cz44b3YuT4l7BRoc08iVBIDVDJ9uYJqJBNiSR3u-hkCWaZ5NI5lmiEtD1j0ieZqFHCGVf4faCZGtuN0Wh1sRlalMecQWmzoTJfne9qYZPdT77rJDrzY-MVI3-eG5kBI4X*PnC9N5L-k_";
 
-    public static final String userId2 = "542482";
-    public static final String userSig2 = "eJw1jtEKgjAYhd9l1yHb3JYMuhKEshtxlngnbMpf6IZJM6J3b2hdnu*cD84bqXMZmcXBZJDkJGEY490Kn2ZCEtEIoy0-9L11DjSSRIQRYZyJrQFtxhk6WAXOKEvo34E*IHXJO9vGtMC2rFXWjEVtG1WJPM2ulU2HoyB*ufnTC-vDT5xhCH-InsZMhFfJ5wviATBx";
+    public static final String userId2 = "458705";
+    public static final String userSig2 = "eJyrVgrxCdZLrSjILEpVsjI1tDAxMDDQAQuWpRYpWSkZ6RkoQfjFKdmJBQWZKUpWhmZARSbGZqamEJnMlNS8ksy0TLAGE1MLcwNTmJ7MdKCQhXlhkXuuY5pnUKSTqYGzc3pZWVBYRZBnhrG7X7m2i5OnfmV*WUCZa56jhS1UY0lmLtA9huZGJiYGJkaGhrUA1VYv*g__";
 
     private static Boolean isMoNiQi() {
         return Build.VERSION.SDK_INT <= Build.VERSION_CODES.R;
